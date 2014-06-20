@@ -3,13 +3,16 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 import javax.swing.JFrame;
+/*
+this file is commented by robin
 
+*/
 class Buffer 
 {
 	public boolean flag=true; 
 	synchronized int up(int i)
 	{
-		if(flag)//µ±Ð¡ÇòÃ»µ½´ï±ßÔµÊ±
+		if(flag)//ï¿½ï¿½Ð¡ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ÔµÊ±
 		{
 			i-=15;
 			return i;
@@ -18,7 +21,7 @@ class Buffer
 		{
 			try
 			{
-				System.out.print("ÉÏÉýÏß³ÌµÈ´ý¡£¡£¡£");
+				System.out.print("ï¿½ï¿½ï¿½ï¿½ï¿½ß³ÌµÈ´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 				notify();
 				this.wait();
 			}
@@ -30,7 +33,7 @@ class Buffer
 	
 	synchronized int down(int i)
 	{
-		if(!flag)//µ±Ð¡ÇòÃ»µ½´ï±ßÔµÊ±
+		if(!flag)//ï¿½ï¿½Ð¡ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ÔµÊ±
 		{
 			i+=15;
 			return i;
@@ -39,7 +42,7 @@ class Buffer
 		{
 			try
 			{
-				System.out.print("ÏÂ½µÏß³ÌµÈ´ý¡£¡£¡£");
+				System.out.print("ï¿½Â½ï¿½ï¿½ß³ÌµÈ´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 				notify();
 				this.wait();
 			}
