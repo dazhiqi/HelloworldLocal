@@ -12,7 +12,7 @@ class Buffer
 	public boolean flag=true; 
 	synchronized int up(int i)
 	{
-		if(flag)//��С��û�����Եʱ
+		if(flag)
 		{
 			i-=15;
 			return i;
@@ -33,7 +33,7 @@ class Buffer
 	
 	synchronized int down(int i)
 	{
-		if(!flag)//��С��û�����Եʱ
+		if(!flag)
 		{
 			i+=15;
 			return i;
